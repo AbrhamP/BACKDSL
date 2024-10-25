@@ -3,7 +3,7 @@ const userService = require('../services/userService');
 const router = express.Router();
 
 router.get('/User', async(req, res) =>{
-    const users = userService.getAllUsers();
+    const users = await userService.getAllUsers();
     res.json(users);
 })
 module.exports = router;
